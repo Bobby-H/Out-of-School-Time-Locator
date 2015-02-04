@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @location.site %>
+</p>
+
+<p>
+  <strong>Programs:</strong>
+  <%= @location.programs %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @location.cost %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @location.hours %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @location.contact %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @location.program %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @location.grade %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @location.zip %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

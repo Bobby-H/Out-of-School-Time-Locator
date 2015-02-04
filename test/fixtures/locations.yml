@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site: MyString
+  programs: MyString
+  cost: 1
+  hours: 1
+  contact: MyString
+  program: MyString
+  grade: 1
+  zip: 1
+
+two:
+  site: MyString
+  programs: MyString
+  cost: 1
+  hours: 1
+  contact: MyString
+  program: MyString
+  grade: 1
+  zip: 1
