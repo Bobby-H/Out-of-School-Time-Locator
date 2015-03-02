@@ -12,14 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function (){
 
     function initialize() {
       var mapOptions = {
-      center: { lat: -34.397, lng: 150.644},
+      center: { lat: 35.225593, lng: -80.845706},
       zoom: 8
       };
         
