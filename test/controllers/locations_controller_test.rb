@@ -18,7 +18,7 @@ class LocationsControllerTest < ActionController::TestCase
 
   test "should create location" do
     assert_difference('Location.count') do
-      post :create, location: { contact: @location.contact, cost: @location.cost, grade: @location.grade, hours: @location.hours, program: @location.program, programs: @location.programs, site: @location.site, zip: @location.zip }
+      post :create, location: { Assistance: @location.Assistance, address: @location.address, asep: @location.asep, bsep: @location.bsep, contact: @location.contact, cost: @location.cost, email: @location.email, hours: @location.hours, latitude: @location.latitude, longitude: @location.longitude, phone: @location.phone, program: @location.program, scholarship/Financial: @location.scholarship/Financial, school: @location.school, school_Number: @location.school_Number, sep: @location.sep, site: @location.site, transportation: @location.transportation, website: @location.website, zip: @location.zip }
     end
 
     assert_redirected_to location_path(assigns(:location))
@@ -35,7 +35,7 @@ class LocationsControllerTest < ActionController::TestCase
   end
 
   test "should update location" do
-    patch :update, id: @location, location: { contact: @location.contact, cost: @location.cost, grade: @location.grade, hours: @location.hours, program: @location.program, programs: @location.programs, site: @location.site, zip: @location.zip }
+    patch :update, id: @location, location: { Assistance: @location.Assistance, address: @location.address, asep: @location.asep, bsep: @location.bsep, contact: @location.contact, cost: @location.cost, email: @location.email, hours: @location.hours, latitude: @location.latitude, longitude: @location.longitude, phone: @location.phone, program: @location.program, scholarship/Financial: @location.scholarship/Financial, school: @location.school, school_Number: @location.school_Number, sep: @location.sep, site: @location.site, transportation: @location.transportation, website: @location.website, zip: @location.zip }
     assert_redirected_to location_path(assigns(:location))
   end
 

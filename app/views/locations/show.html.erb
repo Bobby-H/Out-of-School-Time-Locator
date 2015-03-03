@@ -1,23 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Program:</strong>
+  <%= @location.program %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @location.zip %>
+</p>
+
+<p>
   <strong>Site:</strong>
   <%= @location.site %>
-</p>
-
-<p>
-  <strong>Programs:</strong>
-  <%= @location.programs %>
-</p>
-
-<p>
-  <strong>Cost:</strong>
-  <%= @location.cost %>
-</p>
-
-<p>
-  <strong>Hours:</strong>
-  <%= @location.hours %>
 </p>
 
 <p>
@@ -26,18 +36,68 @@
 </p>
 
 <p>
-  <strong>Program:</strong>
-  <%= @location.program %>
+  <strong>Email:</strong>
+  <%= @location.email %>
 </p>
 
 <p>
-  <strong>Grade:</strong>
-  <%= @location.grade %>
+  <strong>School number:</strong>
+  <%= @location.school_Number %>
 </p>
 
 <p>
-  <strong>Zip:</strong>
-  <%= @location.zip %>
+  <strong>School:</strong>
+  <%= @location.school %>
+</p>
+
+<p>
+  <strong>Asep:</strong>
+  <%= @location.asep %>
+</p>
+
+<p>
+  <strong>Sep:</strong>
+  <%= @location.sep %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @location.cost %>
+</p>
+
+<p>
+  <strong>Scholarship/financial:</strong>
+  <%= @location.scholarship/Financial %>
+</p>
+
+<p>
+  <strong>Assistance:</strong>
+  <%= @location.Assistance %>
+</p>
+
+<p>
+  <strong>Transportation:</strong>
+  <%= @location.transportation %>
+</p>
+
+<p>
+  <strong>Bsep:</strong>
+  <%= @location.bsep %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @location.website %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @location.hours %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @location.phone %>
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |

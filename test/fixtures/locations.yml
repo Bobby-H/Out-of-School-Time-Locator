@@ -1,21 +1,45 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  site: MyString
-  programs: MyString
-  cost: 1
-  hours: 1
-  contact: MyString
   program: MyString
-  grade: 1
+  latitude: 1.5
+  longitude: 1.5
+  address: MyString
   zip: 1
+  site: MyString
+  contact: MyString
+  email: MyString
+  school_Number: 1
+  school: 1
+  asep: MyString
+  sep: MyString
+  cost: MyString
+  scholarship/Financial: MyString
+  Assistance: MyString
+  transportation: MyString
+  bsep: MyString
+  website: 1.5
+  hours: 1.5
+  phone: MyString
 
 two:
-  site: MyString
-  programs: MyString
-  cost: 1
-  hours: 1
-  contact: MyString
   program: MyString
-  grade: 1
+  latitude: 1.5
+  longitude: 1.5
+  address: MyString
   zip: 1
+  site: MyString
+  contact: MyString
+  email: MyString
+  school_Number: 1
+  school: 1
+  asep: MyString
+  sep: MyString
+  cost: MyString
+  scholarship/Financial: MyString
+  Assistance: MyString
+  transportation: MyString
+  bsep: MyString
+  website: 1.5
+  hours: 1.5
+  phone: MyString

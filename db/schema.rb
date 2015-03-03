@@ -11,17 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129225822) do
+ActiveRecord::Schema.define(version: 20150303205607) do
 
   create_table "locations", force: true do |t|
-    t.string   "site"
-    t.string   "programs"
-    t.integer  "cost"
-    t.integer  "hours"
-    t.string   "contact"
     t.string   "program"
-    t.integer  "grade"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
     t.integer  "zip"
+    t.string   "site"
+    t.string   "contact"
+    t.string   "email"
+    t.integer  "school_Number"
+    t.integer  "school"
+    t.string   "asep"
+    t.string   "sep"
+    t.string   "cost"
+    t.string   "scholarship_financial"
+    t.string   "Assistance"
+    t.string   "transportation"
+    t.string   "bsep"
+    t.float    "website"
+    t.float    "hours"
+    t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

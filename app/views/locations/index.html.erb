@@ -1,45 +1,61 @@
+<div id="map-canvas"></div>
 <h1>Listing locations</h1>
 
-<table>
+<table class="table table-hover table-stripped table-condensed">
   <thead>
-          <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
     <tr>
-      <th>Site</th>
-      <th>Programs</th>
-      <th>Cost</th>
-      <th>Hours</th>
-      <th>Contact</th>
       <th>Program</th>
-      <th>Grade</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
       <th>Zip</th>
+      <th>Site</th>
+      <th>Contact</th>
+      <th>Email</th>
+      <th>School number</th>
+      <th>School</th>
+      <th>Asep</th>
+      <th>Sep</th>
+      <th>Cost</th>
+      <th>Scholarship/financial</th>
+      <th>Assistance</th>
+      <th>Transportation</th>
+      <th>Bsep</th>
+      <th>Website</th>
+      <th>Hours</th>
+      <th>Phone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <div id="map-canvas"></div>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.site %></td>
-        <td><%= location.programs %></td>
-        <td><%= location.cost %></td>
-        <td><%= location.hours %></td>
-        <td><%= location.contact %></td>
         <td><%= location.program %></td>
-        <td><%= location.grade %></td>
+        <td><%= location.latitude %></td>
+        <td><%= location.longitude %></td>
+        <td><%= location.address %></td>
         <td><%= location.zip %></td>
+        <td><%= location.site %></td>
+        <td><%= location.contact %></td>
+        <td><%= location.email %></td>
+        <td><%= location.school_Number %></td>
+        <td><%= location.school %></td>
+        <td><%= location.asep %></td>
+        <td><%= location.sep %></td>
+        <td><%= location.cost %></td>
+        <td><%= location.scholarship/Financial %></td>
+        <td><%= location.Assistance %></td>
+        <td><%= location.transportation %></td>
+        <td><%= location.bsep %></td>
+        <td><%= location.website %></td>
+        <td><%= location.hours %></td>
+        <td><%= location.phone %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </tbody>
 </table>
 
