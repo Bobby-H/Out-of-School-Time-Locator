@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'CSV'
-CSV.foreach('cfc.csv') do |row| 
+require 'csv'
+CSV.foreach("#{Rails.root}/db/cfc.csv") do |row| 
 	Location.create!(program: row[0],
 					latitude: row[1],
 					longitude: row[2],
@@ -25,5 +25,8 @@ CSV.foreach('cfc.csv') do |row|
 					bsep: row[20],
 					website: row[21],
 					hours: row[22],
+					grade: row[23],
 					phone: row[28])
 end
+
+Location.first.destroy

@@ -18,8 +18,8 @@ class CreateLocations < ActiveRecord::Migration
       t.string :Assistance
       t.string :transportation
       t.string :bsep
-      t.float :website
-      t.float :hours
+      t.string :website
+      t.string :hours
       t.string :phone
 
       t.timestamps
