@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303205607) do
+ActiveRecord::Schema.define(version: 20150304171328) do
 
   create_table "locations", force: true do |t|
     t.string   "program"
@@ -31,11 +31,12 @@ ActiveRecord::Schema.define(version: 20150303205607) do
     t.string   "Assistance"
     t.string   "transportation"
     t.string   "bsep"
-    t.float    "website"
-    t.float    "hours"
+    t.string   "website"
+    t.string   "hours"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "grade"
   end
 
 end
