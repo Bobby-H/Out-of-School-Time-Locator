@@ -16,13 +16,13 @@
 
 $(document).ready(function (){
 
-function initialize() {
-
+  function initialize() {
     var mapOptions = {
        zoom: 10,
        scrollwheel: false,   
        center: { lat: 35.226154, lng: -80.836779},
-    }
+    };
+
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -31,23 +31,23 @@ function initialize() {
       var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        title: "<%= l.program %>"
+        title: "<%= l.site %>"
       });
    
-      var contentString = '<h2>'+ "<%= l.program %>" + '</h2>' +
+      var contentString = '<h2>' + "<%= l.site %>" + '</h2>' +
       '<p>' + "<%= l.address %>" + '</p>';
     
 
       var infowindow = new google.maps.InfoWindow({
-      content: contentString
+        content: contentString
       });
       
 
       google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-    });
-      "<% end %>"
-}
+         infowindow.open(map,this);
+      });
+    "<% end %>"
+  }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
 });

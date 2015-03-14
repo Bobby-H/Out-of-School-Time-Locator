@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~>3.3.3'
 
 gem 'figaro', '~> 1.1.0'
 
+gem 'geocoder', '~> 1.2.7'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
