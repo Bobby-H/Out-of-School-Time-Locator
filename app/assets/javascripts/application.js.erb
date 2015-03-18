@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+  // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -27,6 +27,9 @@ $(document).ready(function (){
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     "<% Location.all.each do |l| %>"
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
       var myLatlng = new google.maps.LatLng("<%= l.latitude %>", "<%= l.longitude %>");
       var marker = new google.maps.Marker({
         position: myLatlng,
@@ -38,9 +41,9 @@ $(document).ready(function (){
       '<p>' + "<%= l.address %>" + '</p>';
     
 
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
+      // var infowindow = new google.maps.InfoWindow({
+      //   content: contentString
+      // });
       
 
       google.maps.event.addListener(marker, 'click', function() {
