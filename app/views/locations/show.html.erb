@@ -1,4 +1,13 @@
-<div id="map-canvas"></div>
+<%= javascript_tag do %>
+    latitude = '<%= j @location.latitude.to_s %>';
+    longitude = '<%= j @location.longitude.to_s %>';
+    address = '<%= j @location.address %>';
+  
+  <% end %>
+
+
+
+<div id="location-map"></div>
 
 <p id="notice"><%= notice %></p>
 

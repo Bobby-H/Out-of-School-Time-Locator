@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-  #map-canvas, #destination-map {
+  #map-canvas, #location-map {
 	width:	100%;
 	height: 500px;
 }
