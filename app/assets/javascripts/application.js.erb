@@ -26,15 +26,14 @@ $(document).ready(function (){
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+     var infowindow = new google.maps.InfoWindow();
     "<% Location.all.each do |l| %>"
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
       var myLatlng = new google.maps.LatLng("<%= l.latitude %>", "<%= l.longitude %>");
       var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: "<%= l.site %>"
+      
       });
    
       var contentString = '<h2>' + "<%= l.site %>" + '</h2>' +
@@ -46,9 +45,16 @@ $(document).ready(function (){
       // });
       
 
-      google.maps.event.addListener(marker, 'click', function() {
-         infowindow.open(map,this);
-      });
+      // google.maps.event.addListener(marker, 'click', function() {
+      //    infowindow.open(map,this);
+      // });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, contentString) {
+            return function() {
+                infowindow.setContent(contentString);
+                infowindow.open(map, marker);
+            }
+        })(marker, contentString));
     "<% end %>"
   }
 

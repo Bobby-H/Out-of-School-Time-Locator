@@ -34,8 +34,8 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= link_to location.site, location %></td>
-        <td><%= location.program %></td>
+        <td><%= location.site%></td>
+        <td><%= link_to location.program, location %></td>
         <td><%= location.contact %></td>
         <td><%= location.email %></td>
         <td><%= location.website %></td>
