@@ -36,9 +36,13 @@ $(document).ready(function (){
         title: "<%= l.site %>"
       
       });
-   
-      var contentString = '<h2>' + "<%= l.site %>" + '</h2>' +
-      '<p>' + "<%= l.address %>" + '</p>' ;
+
+      var contentString = "<h2><%= l.site %></h2>" +
+                           "<p><%= l.address %></p>" +
+                           " <% site_programs = Location.where(site: l.site).all %>" +
+                            "<ul> <% site_programs.each do |p| %>" +
+                            "<li><a href='/locations/<%= p.id %>'><%= p.program %></a></li>" +
+                            "<% end %></ul>";
     
 
       // var infowindow = new google.maps.InfoWindow({
