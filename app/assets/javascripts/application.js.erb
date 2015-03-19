@@ -30,9 +30,11 @@ $(document).ready(function (){
      "<% @locations = Location.all %>"
     "<% @locations.each do |l| %>"
       var myLatlng = new google.maps.LatLng("<%= l.latitude %>", "<%= l.longitude %>");
+      var image = '<%= asset_path "blue-dot.png"%>';
       var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
+        icon: image,
         title: "<%= l.site %>"
       
       });
