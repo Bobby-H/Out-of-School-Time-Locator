@@ -27,7 +27,8 @@ $(document).ready(function (){
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
      var infowindow = new google.maps.InfoWindow();
-    "<% Location.all.each do |l| %>"
+     "<% @locations = Location.all %>"
+    "<% @locations.each do |l| %>"
       var myLatlng = new google.maps.LatLng("<%= l.latitude %>", "<%= l.longitude %>");
       var marker = new google.maps.Marker({
         position: myLatlng,
@@ -37,7 +38,7 @@ $(document).ready(function (){
       });
    
       var contentString = '<h2>' + "<%= l.site %>" + '</h2>' +
-      '<p>' + "<%= l.address %>" + '</p>';
+      '<p>' + "<%= l.address %>" + '</p>' ;
     
 
       // var infowindow = new google.maps.InfoWindow({
