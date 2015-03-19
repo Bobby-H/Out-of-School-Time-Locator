@@ -10,9 +10,9 @@
   <p> Out of School Time Program Locations</p>
 <div id="map-canvas"></div>
 
-<h1>Listing locations</h1>
+<h3>Basic Info</h3>
 
-<div class="row" style="overflow: auto; height: 300px; width: 100%;">
+<div class="row" style="overflow: auto; height: 300px; width: 100%; white-space:nowrap;">
 
 <table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
   <thead>
@@ -24,6 +24,40 @@
       <th>Website</th>
       <th>Phone</th>
       <th>Grade</th>
+     
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.site%></td>
+        <td><%= link_to location.program, location %></td>
+        <td><%= location.contact %></td>
+        <td><%= location.email %></td>
+        <td><%= location.website %></td>
+        <td><%= location.phone %></td>
+        <td><%= location.grade %></td>
+   
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<h3>Additional Info</h3>
+
+<div class="row" style="overflow: auto; height: 300px; width: 100%; white-space:nowrap;">
+
+<table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>Program</th>
       <th>Transportation</th>
       <th>Hours</th>
       <th>Cost per Child</th>
@@ -39,11 +73,6 @@
       <tr>
         <td><%= location.site%></td>
         <td><%= link_to location.program, location %></td>
-        <td><%= location.contact %></td>
-        <td><%= location.email %></td>
-        <td><%= location.website %></td>
-        <td><%= location.phone %></td>
-        <td><%= location.grade %></td>
         <td><%= location.transportation %></td>
         <td><%= location.hours %></td>
         <td><%= location.cost  %></td>
@@ -56,8 +85,6 @@
   </tbody>
 </table>
 </div>
-
-<br>
 
 <%= link_to 'New Location', new_location_path %>
 </div>
