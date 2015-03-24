@@ -8,18 +8,19 @@
   <div>
     <%= form_tag("/", method: "post") do %>
       <%= label_tag(:site_query, "Site:") %>
-      <%= text_field_tag(:site_query) %>
+      <%= select_tag(:site_query, options_for_select(@uniq_sites.collect), prompt: 'Select Site')%>
 
       <%= label_tag(:program_query, "Program:") %>
-      <%= text_field_tag(:program_query) %>
+      <%= select_tag(:program_query, options_for_select(@uniq_programs.collect), prompt: 'Select Program')%>
 
-      <%= label_tag(:zip_query, "Zip:") %>
-      <%= text_field_tag(:zip_query) %>
+      <%= label_tag(:zip_query, "Zip Code:") %>
+      <%= select_tag(:zip_query, options_for_select(@uniq_zips.collect), prompt: 'Select Zip Code')%>
 
       <%= label_tag(:grade_query, "Grade:") %>
-      <%= text_field_tag(:grade_query) %>
+      <%= select_tag(:grade_query, options_for_select(@uniq_grades.collect), prompt: 'Select Grade')%>
 
       <%= submit_tag('Filter!') %>
+      <%= link_to 'Clear Filter!', root_path %>
     <% end %>
   </div>
 
@@ -99,4 +100,3 @@
 
   <%= link_to 'New Location', new_location_path %>
 </div>
-
