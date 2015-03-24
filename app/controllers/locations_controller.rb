@@ -4,7 +4,11 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    if params[:site_query] && params[:program_query] && params[:zip_query] && params[:grade_query]
+      @locations = Location.where(site: params[:site_query], program: params[:program_query], zip: params[:zip_query], grade: params[:grade_query] )
+    else
+      @locations = Location.all
+    end
   end
 
   # GET /locations/1

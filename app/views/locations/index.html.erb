@@ -1,95 +1,102 @@
-<!DOCTYPE>
-<html>
-<head>
-<title>Out of School Time Locator Map</title>
-</head>
-
-<body>
-  <div class="container">
+<div class="container">
   <h1>Out of School Time Locator Map</h1>
   <p> Out of School Time Program Locations</p>
-<div id="map-canvas"></div>
+  <div id="map-canvas"></div>
 
-<h3>Basic Info</h3>
+  <h3>Basic Info</h3>
 
-<div class="row" style="overflow: auto; height: 300px; width: 100%;">
+  <div>
+    <%= form_tag("/", method: "post") do %>
+      <%= label_tag(:site_query, "Site:") %>
+      <%= text_field_tag(:site_query) %>
 
-<table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
-  <thead>
-    <tr>
-      <th>Site</th>
-      <th>Program</th>
-      <th>Contact</th>
-      <th>Email</th>
-      <th>Website</th>
-      <th>Phone</th>
-      <th>Grade</th>
-     
+      <%= label_tag(:program_query, "Program:") %>
+      <%= text_field_tag(:program_query) %>
 
-    </tr>
-  </thead>
+      <%= label_tag(:zip_query, "Zip:") %>
+      <%= text_field_tag(:zip_query) %>
 
-  <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-        <td><%= location.site%></td>
-        <td><%= link_to location.program, location %></td>
-        <td><%= location.contact %></td>
-        <td><%= location.email %></td>
-        <td><%= location.website %></td>
-        <td><%= location.phone %></td>
-        <td><%= location.grade %></td>
-   
+      <%= label_tag(:grade_query, "Grade:") %>
+      <%= text_field_tag(:grade_query) %>
 
-      </tr>
+      <%= submit_tag('Filter!') %>
     <% end %>
-  </tbody>
-</table>
+  </div>
+
+  <div class="row" style="overflow: auto; height: 300px; width: 100%;">
+
+    <table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Program</th>
+          <th>Contact</th>
+          <th>Email</th>
+          <th>Website</th>
+          <th>Phone</th>
+          <th>Grade</th>
+         
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @locations.each do |location| %>
+          <tr>
+            <td><%= location.site%></td>
+            <td><%= link_to location.program, location %></td>
+            <td><%= location.contact %></td>
+            <td><%= location.email %></td>
+            <td><%= location.website %></td>
+            <td><%= location.phone %></td>
+            <td><%= location.grade %></td>
+       
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <h3>Additional Info</h3>
+
+  <div class="row" style="overflow: auto; height: 300px; width: 100%;">
+
+    <table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
+      <thead>
+        <tr>
+          <th>Site</th>
+          <th>Program</th>
+          <th>Transportation</th>
+          <th>Hours</th>
+          <th>Cost per Child</th>
+          <th>After Sch.</th>
+          <th>Before Sch.</th>
+          <th>Summer</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @locations.each do |location| %>
+          <tr>
+            <td><%= location.site%></td>
+            <td><%= link_to location.program, location %></td>
+            <td><%= location.transportation %></td>
+            <td><%= location.hours %></td>
+            <td><%= location.cost  %></td>
+            <td><%= location.asep %></td>
+            <td><%= location.bsep %></td>
+            <td><%= location.sep %></td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to 'New Location', new_location_path %>
 </div>
-
-<br>
-
-<h3>Additional Info</h3>
-
-<div class="row" style="overflow: auto; height: 300px; width: 100%;">
-
-<table class="table table-hover table-stripped table-condensed table-bordered col-sm-12">
-  <thead>
-    <tr>
-      <th>Site</th>
-      <th>Program</th>
-      <th>Transportation</th>
-      <th>Hours</th>
-      <th>Cost per Child</th>
-      <th>After Sch.</th>
-      <th>Before Sch.</th>
-      <th>Summer</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-        <td><%= location.site%></td>
-        <td><%= link_to location.program, location %></td>
-        <td><%= location.transportation %></td>
-        <td><%= location.hours %></td>
-        <td><%= location.cost  %></td>
-        <td><%= location.asep %></td>
-        <td><%= location.bsep %></td>
-        <td><%= location.sep %></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
-
-<%= link_to 'New Location', new_location_path %>
-</div>
-
-</body> 
-
-</html>
 
