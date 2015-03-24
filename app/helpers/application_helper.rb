@@ -1,10 +1,10 @@
 module ApplicationHelper
 	
 	def uniqueness
-		@uniq_sites = Location.pluck(:site).uniq
-    	@uniq_programs = Location.pluck(:program).uniq
-    	@uniq_zips = Location.pluck(:zip).uniq
-    	@uniq_grades = Location.pluck(:grade).uniq
+		@uniq_sites = Location.pluck(:site).uniq.sort
+    	@uniq_programs = Location.pluck(:program).uniq.sort
+    	@uniq_zips = Location.pluck(:zip).uniq.sort
+    	@uniq_grades = Location.pluck(:grade).uniq.sort
     end
 
 	def set_locations
@@ -43,12 +43,14 @@ module ApplicationHelper
 		end
 	end
 
-	# def set_locations_take_deux
-	# 	if params[:site_query].nil? && params[:program_query].nil? && params[:zip_query].nil? && params[:grade_query].nil?
-	# 		@locations = Location.all
-	# 	elsif params[:site_query].present? && params[:program_query].nil? && params[:zip_query].nil? && params[:grade_query].nil?
-	# 		@locations = Location.where(site: params[:site_query] )
-	# 	end
+	def set_locations_take_deux
+		if params[:site_query].nil? && params[:program_query].nil? && params[:zip_query].nil? && params[:grade_query].nil?
+			@locations = Location.all
+		elsif params[:site_query].present? && params[:program_query].nil? && params[:zip_query].nil? && params[:grade_query].nil?
+			@locations = Location.where(site: params[:site_query] )
+		else
+			@locations = Location.where(site: params[:site_query], program: params[:program_query], zip: params[:zip_query], grade: params[:grade_query] )
+		end
 		
-	# end
+	end
 end

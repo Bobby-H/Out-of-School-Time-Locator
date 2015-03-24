@@ -6,7 +6,7 @@ class LocationsController < ApplicationController
   def index
     uniqueness
 
-    set_locations
+    set_locations_take_deux
   end
 
   # GET /locations/1
