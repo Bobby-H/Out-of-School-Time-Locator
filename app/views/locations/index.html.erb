@@ -133,6 +133,7 @@
           var contentString = "<h2><%= l.site %></h2>" +
                                "<p><%= l.address %></p>" +
                                " <% site_programs = Location.where(site: l.site).all %>" +
+                               "<h4>Programs at this location:</h4>" + 
                                 "<ul> <% site_programs.each do |p| %>" +
                                 "<li><a href='/locations/<%= p.id %>'><%= p.program %></a></li>" +
                                 "<% end %></ul>";
