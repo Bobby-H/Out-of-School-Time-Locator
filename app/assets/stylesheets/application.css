@@ -18,3 +18,8 @@
 	height: 500px;
 }
 
+@media (max-width: 800px) {
+  .hiding {
+    display: none;
+  }
+}
