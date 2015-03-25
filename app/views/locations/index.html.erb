@@ -5,7 +5,7 @@
     <p style="color:red;"><%= @message %></p>
   <% end %>
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-12">
       <div id="map-canvas"></div>
     </div>
   </div>
@@ -14,11 +14,11 @@
   <h3>Basic Info</h3>
   <div class="row">
     <%= form_tag("/", method: "post", class: "form-inline") do %>
-      <div class="col-sm-2"><%= select_tag(:site_query, options_for_select(@uniq_sites.collect), prompt: 'Select Site', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
-      <div class="col-sm-2"><%= select_tag(:program_query, options_for_select(@uniq_programs.collect), prompt: 'Select Program', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
-      <div class="col-sm-2"><%= select_tag(:zip_query, options_for_select(@uniq_zips.collect), prompt: 'Select Zip Code', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
-      <div class="col-sm-2"><%= select_tag(:grade_query, options_for_select(@uniq_grades.collect), prompt: 'Select Grade', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
-      <div class="col-sm-4" style="margin-top: 10px;">
+      <div class="col-md-2"><%= select_tag(:site_query, options_for_select(@uniq_sites.collect), prompt: 'Select Site', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
+      <div class="col-md-2"><%= select_tag(:program_query, options_for_select(@uniq_programs.collect), prompt: 'Select Program', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
+      <div class="col-md-2"><%= select_tag(:zip_query, options_for_select(@uniq_zips.collect), prompt: 'Select Zip Code', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
+      <div class="col-md-2"><%= select_tag(:grade_query, options_for_select(@uniq_grades.collect), prompt: 'Select Grade', class: 'form-control', style: "width: 100%; margin-top: 10px;")%></div>
+      <div class="col-md-4" style="margin-top: 10px;">
         <%= submit_tag('Filter Programs!', class: "btn btn-primary") %>
         <%= link_to 'Clear Filter!', root_path, class: "btn btn-warning" %>
       </div>
@@ -29,7 +29,7 @@
   <br>
 
   <div class="row" style="overflow: auto; height: 300px; width: 100%;">
-    <div class="col-sm-12">
+    <div class="col-md-12">
       <table class="table table-hover table-stripped table-condensed table-bordered">
         <thead>
           <tr>
@@ -69,7 +69,7 @@
   <h3 class="hiding">Additional Info</h3>
 
   <div class="row hiding" style="overflow: auto; height: 300px; width: 100%;">
-    <div class="col-sm-12 hiding">
+    <div class="col-md-12 hiding">
       <table class="table table-hover table-stripped table-condensed table-bordered hiding">
         <thead>
           <tr>
