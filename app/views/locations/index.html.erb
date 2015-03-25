@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Out of School Time Locator Map</h1>
-  <p> Out of School Time Program Locations</p>
+  <p> Out-of-School Time Program Locations</p>
   <% if @message.present? %>
     <p style="color:red;"><%= @message %></p>
   <% end %>
@@ -51,8 +51,8 @@
               <td><%= location.site%></td>
               <td><%= link_to location.program, location %></td>
               <td class="hiding"><%= location.contact %></td>
-              <td class="hiding"><%= location.email %></td>
-              <td class="hiding"><%= location.website %></td>
+              <td class="hiding"><a href="mailto:<%= location.email %>"><%= location.email %></td>
+              <td class="hiding"><a href="<%= location.website %>" target="_blank"><%= location.website %></a></td>
               <td class="hiding"><%= location.phone %></td>
               <td><%= location.grade %></td>
          

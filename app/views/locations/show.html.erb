@@ -3,113 +3,105 @@
     longitude = '<%= j @location.longitude.to_s %>';
     address = '<%= j @location.address %>';
   
-  <% end %>
+<% end %>
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @location.program %></h1>
+      <h2><%= @location.site %></h2>
+    </div>
+  </div>
 
 
+  <div class="row">
+    <div class="col-sm-12">
+        <div id="location-map"></div>
+    </div>
+  </div>
 
-<div id="location-map"></div>
+  <br>
 
-<p id="notice"><%= notice %></p>
+  <div class="row">
 
-<p>
-  <strong>Program:</strong>
-  <%= @location.program %>
-</p>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Program Information:</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <strong>Before School:</strong>
+            <%= @location.bsep %>
+          </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @location.latitude %>
-</p>
+          <p>
+            <strong>After School:</strong>
+            <%= @location.asep %>
+          </p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @location.longitude %>
-</p>
+          <p>
+            <strong>Summer:</strong>
+            <%= @location.sep %>
+          </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @location.address %>
-</p>
+          <p>
+            <strong>Cost:</strong>
+            <%= @location.cost %>
+          </p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @location.zip %>
-</p>
+          <p>
+            <strong>Scholarship/financial:</strong>
+            <%= @location.scholarship_financial %>
+          </p>
 
-<p>
-  <strong>Site:</strong>
-  <%= @location.site %>
-</p>
+          <p>
+            <strong>Transportation:</strong>
+            <%= @location.transportation %>
+          </p>
 
-<p>
-  <strong>Contact:</strong>
-  <%= @location.contact %>
-</p>
+          <p>
+            <strong>Hours:</strong>
+            <%= @location.hours %>
+          </p>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @location.email %>
-</p>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Contanct Information</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <strong>Address:</strong>
+            <%= @location.address %>
+          </p>
 
-<p>
-  <strong>School number:</strong>
-  <%= @location.school_Number %>
-</p>
+          <p>
+            <strong>Website:</strong>
+            <a href="<%= @location.website %>" target="_blank"><%= @location.website %></a>
+          </p>
 
-<p>
-  <strong>School:</strong>
-  <%= @location.school %>
-</p>
+          <p>
+            <strong>Contact:</strong>
+            <%= @location.contact %>
+          </p>
 
-<p>
-  <strong>Asep:</strong>
-  <%= @location.asep %>
-</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:<%= @location.email %>"><%= @location.email %></a>
+          </p>
 
-<p>
-  <strong>Sep:</strong>
-  <%= @location.sep %>
-</p>
+          <p>
+            <strong>Phone:</strong>
+            <%= @location.phone %>
+          </p>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @location.cost %>
-</p>
-
-<p>
-  <strong>Scholarship/financial:</strong>
-  <%= @location.scholarship_financial %>
-</p>
-
-<p>
-  <strong>Assistance:</strong>
-  <%= @location.Assistance %>
-</p>
-
-<p>
-  <strong>Transportation:</strong>
-  <%= @location.transportation %>
-</p>
-
-<p>
-  <strong>Bsep:</strong>
-  <%= @location.bsep %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @location.website %>
-</p>
-
-<p>
-  <strong>Hours:</strong>
-  <%= @location.hours %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @location.phone %>
-</p>
-
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+  </div>
+</div>
