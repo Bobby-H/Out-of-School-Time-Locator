@@ -7,6 +7,7 @@ class LocationsController < ApplicationController
     uniqueness
 
     set_locations
+    @locations = @locations
   end
 
   # GET /locations/1
