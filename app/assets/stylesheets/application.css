@@ -18,7 +18,7 @@
 	height: 500px;
 }
 
-@media handheld, screen and (max-width: 800px) {
+@media all and (max-width: 800px) {
   .hiding {
     display: none;
   }
