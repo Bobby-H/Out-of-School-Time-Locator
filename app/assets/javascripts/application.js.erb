@@ -27,7 +27,6 @@ $(document).ready(function (){
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
      var infowindow = new google.maps.InfoWindow();
-     "<% set_locations %>"
     "<% @locations.each do |l| %>"
       var myLatlng = new google.maps.LatLng("<%= l.latitude %>", "<%= l.longitude %>");
       var image = '<%= asset_path "blue-dot.png"%>';
