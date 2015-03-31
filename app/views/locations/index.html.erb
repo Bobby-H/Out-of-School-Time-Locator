@@ -35,11 +35,12 @@
           <tr>
             <th>Site</th>
             <th>Program</th>
+            <th>More Info</th>
             <th class="hiding">Contact</th>
             <th class="hiding">Email</th>
             <th class="hiding">Website</th>
             <th class="hiding">Phone</th>
-            <th>Grade</th>
+            
            
 
           </tr>
@@ -50,13 +51,11 @@
             <tr>
               <td><%= location.site%></td>
               <td><%= link_to location.program, location %></td>
+              <td><%= link_to "More Info", location %></td>
               <td class="hiding"><%= location.contact %></td>
               <td class="hiding"><a href="mailto:<%= location.email %>"><%= location.email %></td>
               <td class="hiding"><a href="<%= location.website %>" target="_blank"><%= location.website %></a></td>
               <td class="hiding"><%= location.phone %></td>
-              <td><%= location.grade %></td>
-         
-
             </tr>
           <% end %>
         </tbody>
@@ -75,6 +74,7 @@
           <tr>
             <th>Site</th>
             <th>Program</th>
+            <th>Grade</th>
             <th>Transportation</th>
             <th>Hours</th>
             <th>Cost per Child</th>
@@ -90,6 +90,7 @@
             <tr>
               <td><%= location.site%></td>
               <td><%= link_to location.program, location %></td>
+              <td><%= location.grade %></td>
               <td><%= location.transportation %></td>
               <td><%= location.hours %></td>
               <td><%= location.cost  %></td>
