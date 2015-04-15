@@ -22,4 +22,8 @@
   .hiding {
     display: none;
   }
+
+  .smaller-text td{
+  	font-size: 10px;
+  }
 }

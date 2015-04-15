@@ -1,3 +1,22 @@
+<style type="text/css">
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+</style>
+
+<div class="location-table">
 <div class="container">
   <h1>Out of School Time Locator Map</h1>
   <p> Out-of-School Time Program Locations</p>
@@ -10,7 +29,7 @@
     </div>
   </div>
 
-
+<br>
   <h3>Basic Info</h3>
   <div class="row">
     <%= form_tag("/", method: "post", class: "form-inline") do %>
@@ -46,7 +65,7 @@
           </tr>
         </thead>
 
-        <tbody style="font-size: 13.5px;">
+        <tbody style="font-size: 13.5px;" class="smaller-text">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
@@ -63,6 +82,7 @@
     </div>
   </div>
 
+  <br>
   <br>
 
   <h3 class="hiding">Additional Info</h3>
@@ -85,7 +105,7 @@
           </tr>
         </thead>
 
-        <tbody style="font-size: 13.5px;">
+        <tbody style="font-size: 13.5px;" class="smaller-text">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
@@ -171,6 +191,7 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     });
   </script>
+</div>
 </div>
 
 <br>
