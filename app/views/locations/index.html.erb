@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="width: 1170px;">
   <h1>Out of School Time Locator Map</h1>
   <p> Out-of-School Time Program Locations</p>
   <% if @message.present? %>
@@ -46,7 +46,7 @@
           </tr>
         </thead>
 
-        <tbody>
+        <tbody style="font-size: 13.5px;">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
@@ -85,7 +85,7 @@
           </tr>
         </thead>
 
-        <tbody>
+        <tbody style="font-size: 13.5px;">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
