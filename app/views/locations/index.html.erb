@@ -1,16 +1,22 @@
 <style type="text/css">
+  @media only screen and (max-width: 479px) {
+    .location-table div.container {
+      width: 90%;
+    }
+  }
+
   @media (min-width: 768px) {
-    .container {
+    .location-table div.container {
       width: 750px;
     }
   }
-@media (min-width: 992px) {
-    .container {
+  @media (min-width: 992px) {
+    .location-table div.container {
       width: 970px;
     }
   }
-@media (min-width: 1200px) {
-    .container {
+  @media (min-width: 1200px) {
+    .location-table div.container {
       width: 1170px;
     }
   }
@@ -65,7 +71,7 @@
           </tr>
         </thead>
 
-        <tbody style="font-size: 13.5px;" class="smaller-text">
+        <tbody style="font-size: 13px;">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
@@ -105,7 +111,7 @@
           </tr>
         </thead>
 
-        <tbody style="font-size: 13.5px;" class="smaller-text">
+        <tbody style="font-size: 13px;">
           <% @locations.each do |location| %>
             <tr>
               <td><%= location.site%></td>
