@@ -1,6 +1,6 @@
 ActiveAdmin.register Location do
 
-permit_params :program, :latitude, :longitude, :address, :zip, :site, :contact, :email, :school_Number, :school, :asep, :sep, :cost, :scholarship_financial, :Assistance, :transportation, :bsep, :website, :hours, :phone
+permit_params :program, :latitude, :longitude, :address, :zip, :site, :contact, :email, :school_Number, :school, :asep, :sep, :cost, :scholarship_financial, :Assistance, :transportation, :bsep, :website, :hours, :phone, :grade
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
